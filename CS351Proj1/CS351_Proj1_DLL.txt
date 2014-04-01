@@ -1,0 +1,88 @@
+CREATE TABLE IF NOT EXISTS Student(
+    studentID INT PRIMARY KEY,
+    studentName TEXT NOT NULL,
+    major TEXT,
+    class TEXT CHECK(class LIKE ('Sophomore' or 'Freshman' or 'Junior' or 'Senior')),
+    gpa REAL
+    FOREIGN KEY(major) REFRENCES Dept (deptID) ON UPDATE CASCADE
+);
+
+CREATE TABLE IF NOT EXISTS Course(
+    courseNum INT,
+    deptID TEXT,
+    courseName TEXT,
+    location TEXT,
+    meetDay TEXT CHECK((meetDay LIKE '%S%') or (meetDay LIKE '%U%')) /*Saturday denoted as S, Sunday Denoted as U*/
+    meetTime TEXT CHECK (meetTime BETWEEN '7:00' and '17:00')
+    PRIMARY KEY(courseNum,DeptID)
+);
+
+CREATE TABLE IF NOT EXISTS Dept(
+    deptID TEXT(4) UNIQUE PRIMARY KEY,
+    name TEXT,
+    building TEXT  
+);
+    
+CREATE TABLE IF NOT EXISTS Enroll(
+    courseNum INT,
+    deptID TEXT,
+    studentID INT
+    PRIMARY KEY(courseNum,deptID,studentID),
+    FOREIGN KEY(studentID) REFERENCES Student (studentID) ON UPDATE CASCADE,
+    FOREIGN KEY(deptID,courseNum) REFRENCES Course (deptID, courseNum) ON UPDATE CASCADE   
+);
+
+/*
+SELECTION QUERIEs
+
+1.
+SELECT deptID,name
+FROM Dept
+WHERE;
+
+2.
+SELECT *
+FROM Student NATURAL JOIN Enroll NATURAL JOIN Course
+WHERE;
+
+3.
+SELECT *
+FROM Course
+WHERE deptID = 'MATH',meetDay = 'TR',startTime > '12:00';
+
+4.
+SELECT courseNum, deptID,courseName, location, meetDay, meetTime
+FROM Student NATURAL JOIN Enroll NATURAL JOIN Course
+WHERE studentName = 'Alexis';
+
+5.
+SELECT studentId, studentName,major,class
+FROM Student NATURAL JOIN Enroll NATURAL JOIN Course
+WHERE (deptID != major)
+ORDER BY (class, major);
+*/
+
+/* 
+AGGREGATION QUERIES
+
+6.
+SELECT deptID,name
+FROM Dept
+WHERE;
+
+7.
+SELECT deptID,name
+FROM Dept
+WHERE;
+
+8.
+SELECT deptID,name
+FROM Dept
+WHERE;
+
+9.
+SELECT deptID,name
+FROM Dept
+WHERE;
+
+*/

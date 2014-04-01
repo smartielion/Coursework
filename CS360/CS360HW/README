@@ -1,0 +1,17 @@
+Casey Gilray
+Feb 4th, 2014
+CS360
+Assignment 2
+
+The ok program is used to check if a given word is in the webaster dictionary provided.
+
+Usage of this program
+
+To build: type make
+To run: ./ok "word to be checked, no quotations"
+
+Included in this directory:
+webster: master dictionary for words
+okay.c: C source file
+makefile: used to build the file
+README: This

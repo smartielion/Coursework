@@ -1,0 +1,50 @@
+#usr/bin/perl
+use strict;
+
+my $site = "http://www.reddit.com/r/aww";
+open (my $fh, "curl $site|") or die "$!\n";
+my @image_urls;
+my @link_urls;
+for (<fh>){
+    #match and capture desired links
+    while (/src="(^"]*)*/gi){
+	my $url = $1;
+	$url = $site . $url unless $url =~ /^http:/i
+	    push @image_urls, $url;
+    }
+    while(/\s+href="([^"]*)"/gi){
+	#check if it is linkto an image or to a site
+	my $url = $1;
+	$url =$site . $url unless $url =~ /^http:/i;
+	if ($url =~ /\.(png|jpe?g|tiff|gif|bmp)$/i){
+	    push @image_urls, $url;
+        }
+	else
+	{
+	    push @link_urls, $url;
+	}
+    }
+
+}
+close $fh;
+
+my %sites;
+for (@link_urls){
+    $sites{$1} = 1 if m{https?://([^/\%\:]*)}i;
+}
+
+print << EOH;
+<html>
+<head>
+<title>Web harvest of $Site</title>
+</head>
+<body>
+EOH
+
+#image table, shows thumbnail link  in first cell with url unlinked in the second
+#link table, each row containes url of harvested link
+#unique site table, for all things in the hash, print out the clickable link.
+
+    print << EOT;
+</body>
+</html>

@@ -1,0 +1,16 @@
+Casey Gilray
+CS360
+Feb 4th, 2014
+Assignment 1
+cgilray@gmail.com
+
+pairCount will count and list all pairs of words in any number of given source files.
+
+To build: type "make" in the terminal.
+To run: type "./pairCount -[int number of lines to output] -{filename}"
+
+Included in this directory:
+hashTable.c, hashTable.h ~ Source code for the data structure
+wordpair.c ~ Main program, takes the input and uses a hashtable strcutre
+lionking.txt, mobydick-words.txt ~ test files used(You can use them too!)
+makefile ~ used to build the program

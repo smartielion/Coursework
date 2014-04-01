@@ -1,0 +1,127 @@
+-- Q1
+
+/*
+deptID      name                      
+----------  --------------------------
+CS          School of Computer Science
+MATH        Department of Mathematics 
+BUS         School of Business        
+ENG         Department of English 
+*/
+
+
+
+--Q2
+
+/*
+StudentID   StudentName  major       class       gpa         CourseNum   deptID      CourseName                 Location    meetDay     meetTime
+----------  -----------  ----------  ----------  ----------  ----------  ----------  -------------------------  ----------  ----------  ----------
+1282        Kelly        CS          Freshman    2.5         351         CS          Intro to Database Systems  VELS 19     MW          12:00 
+1282        Kelly        CS          Freshman    2.5         122         BUS         Economics                  VUCB 30     MW          13:30 
+1510        Jordan       MATH        Freshman    3.0         351         CS          Intro to Database Systems  VELS 19     MW          12:00 
+1510        Jordan       MATH        Freshman    3.0         351         BUS         Finance                    VUCB 29     TR          12:00 
+1510        Jordan       MATH        Freshman    3.0         122         BUS         Economics                  VUCB 30     MW          13:30 
+1689        Gabriel      BUS         Senior      2.4         460         CS          Operating Systems          VMMC 8      MW          14:00 
+1101        Haley        MATH        Senior      4.0         230         MATH        Linear Algebra             VUCB 308    TR          15:00 
+1101        Haley        MATH        Senior      4.0         120         MATH        Algebra                    VMMC 10     MW          12:00 
+1782        Andrew       BUS         Sophomore   3.7         230         MATH        Linear Algebra             VUCB 308    TR          15:00 
+1247        Alexis       ENG         Senior      3.9         320         MATH        Discrete Math              VUCB 307    F           11:00 
+1247        Alexis       ENG         Senior      3.9         453         CS          Web Data Management        VELS 23     TR          09:00 
+1247        Alexis       ENG         Senior      3.9         351         CS          Intro to Database Systems  VELS 19     MW          12:00 
+1316        Austin       CS          Sophomore   2.1         460         CS          Operating Systems          VMMC 8      MW          14:00 
+1316        Austin       CS          Sophomore   2.1         122         BUS         Economics                  VUCB 30     MW          13:30 
+1911        David        ENG         Senior      3.2         351         CS          Intro to Database Systems  VELS 19     MW          12:00 
+1911        David        ENG         Senior      3.2         453         CS          Web Data Management        VELS 23     TR          09:00
+1911        David        ENG         Senior      3.2         230         MATH        Linear Algebra             VUCB 308    TR          15:00
+1501        Jessica      CS          Freshman    3.3         351         CS          Intro to Database Systems  VELS 19     MW          12:00
+1304        Jordan       MATH        Senior      2.9         351         BUS         Finance                    VUCB 29     TR          12:00
+1025        John         ENG         Senior      3.6         351         BUS         Finance                    VUCB 29     TR          12:00
+1025        John         ENG         Senior      3.6         351         CS          Intro to Database Systems  VELS 19     MW          12:00
+1934        Kyle         BUS         Junior      2.1         351         CS          Intro to Database Systems  VELS 19     MW          12:00
+1934        Kyle         BUS         Junior      2.1         453         CS          Web Data Management        VELS 23     TR          09:00
+1661        Logan        CS          Freshman    0.5         351         CS          Intro to Database Systems  VELS 19     MW          12:00
+1661        Logan        CS          Freshman    0.5         460         CS          Operating Systems          VMMC 8      MW          14:00
+1661        Logan        CS          Freshman    0.5         460         MATH        Calc III                   VECS 102    TR          12:30
+1661        Logan        CS          Freshman    0.5         351         BUS         Finance                    VUCB 29     TR          12:00
+*/
+
+
+
+--Q3
+/*
+courseNum   deptID      courseName      location    meetDay     meetTime  
+----------  ----------  --------------  ----------  ----------  ----------
+230         MATH        Linear Algebra  VUCB 308    TR          15:00     
+460         MATH        Calc III        VECS 102    TR          12:30     
+*/
+
+
+--Q4
+/*
+CourseNum   deptID      CourseName     Location    meetDay     meetTime
+----------  ----------  -------------  ----------  ----------  ----------
+320         MATH        Discrete Math  VUCB 307    F           11:00
+453         CS          Web Data Mana  VELS 23     TR          09:00
+351         CS          Intro to Data  VELS 19     MW          12:00
+*/
+
+
+--Q5
+/*
+studentID   name        major       class       gpa       
+----------  ----------  ----------  ----------  ----------
+1101        Haley       MATH        Senior      4.0       
+1501        Jessica     CS          Freshman    3.3       
+*/
+
+--Q6
+/*
+class       AverageGPA
+----------  ----------
+Freshman    2.325     
+Junior      2.96666666
+Senior      3.24285714
+Sophomore   2.26666666
+*/
+
+
+--Q7
+
+/*
+studentID   name        class       major       gpa         AvgClassGPA
+----------  ----------  ----------  ----------  ----------  -----------
+1661        Logan       Freshman    CS          0.5         2.325
+1709        Cassandra   Junior      CS          2.8         2.966666666
+1934        Kyle        Junior      BUS         2.1         2.966666666
+1304        Jordan      Senior      MATH        2.9         3.242857142
+1641        Brittany    Senior      ENG         2.7         3.242857142
+1689        Gabriel     Senior      BUS         2.4         3.242857142
+1911        David       Senior      ENG         3.2         3.242857142
+1316        Austin      Sophomore   CS          2.1         2.266666666
+1468        Kris        Sophomore   ENG         1.0         2.266666666
+*/
+
+
+--Q8
+
+/*
+StudentID   StudentName  c1
+----------  -----------  ----------
+1661        Logan        4  
+*/
+
+
+--Q9
+
+/*
+deptID      c
+----------  ----------
+CS          14
+MATH        6   
+*/
+
+
+
+
+
+

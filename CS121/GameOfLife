@@ -1,0 +1,18 @@
+#Game of Life - Assignment 8
+#Casey Gilray
+#Last edit: 11/9/11
+#This program shows the "game of life" developed by John Conway
+
+def createOneRow(n):
+    #Creates a list of zeros to define a row
+    r = []
+    for col in range(n):
+        r =+[0]
+    return r
+
+def createBoard(r,c):
+    #Creates a 2d grid of zeros
+    t = []
+    for i in range(r):
+        t += createOneRow(c)
+    return

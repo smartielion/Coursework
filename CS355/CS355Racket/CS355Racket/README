@@ -1,0 +1,16 @@
+Casey Gilray
+Assignment 2 ~ Scheme
+cgilray@gmail.com
+
+This rkt file is opened in racket and provides an implementation of olinvg 3-sat problems using the hill climb method
+
+to test run and type replacing # with 1,2,3 or make your own
+(simple-hill-climb clauses# teststate 1000 (unsat-clauses clauses# teststate)))
+this will output its best try at a solution for the clauses
+
+You can check if it is an actual solution by running 
+(unsat-clauses clauses# statefinal#)
+where statefinal is the returned state (must be defined by user)
+
+if this returns an empty list, the state is a solution
+

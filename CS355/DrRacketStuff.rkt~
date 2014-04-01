@@ -1,0 +1,21 @@
+#lang Racket
+
+(define eval-var (lambda(var state)
+  (if(equal? (car (car state) ) var)
+                   (cdr (car state)) 
+                   (eval-var var (cdr state)))
+                 ))
+(define eval-clause (lambda (clause state)
+                     (if(= (length clause)1)
+                                     (if(= (length(car clause))2)
+                                           (not (eval-var (car(cdr clause)) state))
+                                           (eval-var (car state) clause))
+                      (if(list? (car clause))
+                         (if (not (eval-var (car (cdr(car clause))) state))
+                             #t
+                             (eval-clause (cdr clause) state))
+                         (if (eval-var (car clause) state)
+                             #t
+                             (eval-clause(cdr clause) state))
+                      ))))
+                

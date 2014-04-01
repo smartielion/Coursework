@@ -1,0 +1,6 @@
+INDEX VERSION 1.126+/Volumes/cgilray/Desktop/DataStructures/.metadata/.plugins/org.eclipse.jdt.core
+2178752195.index
+631864174.index
+345030926.index
+1170115154.index
+1017529980.index

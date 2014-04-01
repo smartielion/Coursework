@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist SYSTEM "file://localhost/System/Library/DTDs/PropertyList.dtd">
+<plist version="0.9">
+<dict>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+	<key>CFBundleShortVersionString</key>
+	<string>6.6.4</string>
+	<key>CFBundleIconFile</key>
+	<string>swipl</string>
+	<key>CFBundleDisplayName</key>
+	<string>SWI-Prolog</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Created by the SWI-Prolog project</string>
+	<key>NSHumanReadableCopyright</key>
+	<string>LGPL</string>
+	<key>CFBundleSignature</key>
+	<string>swpl</string>
+	<key>CFAppleHelpAnchor</key>
+	<string>swipl-macosx.html</string>
+	<key>CFBundleExecutable</key>
+	<string>swipl-win</string>
+	<key>CFBundleIdentifier</key>
+	<string>org.swi-prolog.swipl-win</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+	<dict>
+	  <key>CFBundleTypeExtensions</key>
+	  <array>
+	  <string>pl</string>
+	  <string>prolog</string>
+	  </array>
+	  <key>CFBundleTypeName</key>
+	  <string>Prolog source</string>
+	  <key>CFBundleTypeIconFile</key>
+	  <string>swipl</string>
+	  <key>CFBundleTypeRole</key>
+	  <string>Shell</string>
+	  <key>LSHandlerRank</key>
+          <string>Default</string>
+	</dict>
+	</array>
+</dict>
+</plist>

@@ -1,0 +1,76 @@
+/*
+ * Be sure to save this file before running!
+ */
+ 
+/* 
+ * This example zips up and down in the middle of the screen
+ *    State 0 is always the starting state 
+ */
+
+/* Casey Gilray
+ * Picobot Map 2
+ * 8/29/11
+ * This picot program covers all squares in any maze it is given by prioritizing going right, then        
+ *left, then back the way it came. If it has to go back the way it came it will switch its priorities
+ * to left, then right, then back, and vice versa
+ */
+ 
+ 
+2                   // this indicates the map we want to start with
+
+
+
+//Initial state
+0 X*** -> N 1
+0 Nx** -> E 2
+0 NE*x -> S 3
+0 NExS -> W 4
+
+//Going north , checking east
+1 xE** -> N 1
+1 *x** -> E 2
+1 NEx* -> W 4
+1 NEWx -> S 3
+
+//Going East checking south
+2 *x*S -> E 2        
+2 ***x -> S 3   
+2 xE*S -> N 1 
+2 NExS -> W 4
+
+//Going south, Checking west
+3 **Wx -> S 3        
+3 **x* -> W 4   
+3 *xWS -> E 2 
+3 xEWS -> N 1
+
+//Going west Checking north
+4 N*x* -> W 4        
+4 x*** -> N 1   
+4 N*Wx -> S 3 
+4 NxWS -> E 2
+
+//Going north , checking west
+5 x*W* -> N 5
+5 **x* -> W 7
+5 NxW* -> E 3
+5 NEWx -> S 3
+
+//Going East checking north
+6 Nx** -> E 6        
+6 x*** -> N 5   
+6 NE*x -> S 7 
+6 NExS -> W 4
+
+//Going south, Checking east
+7 *E*x -> S 7        
+7 *x** -> E 4   
+7 *ExS ->  W 8 
+7 xEWS -> N 1
+
+//Going west Checking south
+8 **xS -> W 8       
+8 ***x -> S 7   
+8 x*WS -> N 5 
+8 NxWS -> E 2
+
